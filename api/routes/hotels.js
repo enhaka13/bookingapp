@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
         const savedHotel = await newHotel.save()
         res.send(201).json(savedHotel)
     } catch (err) {
-        throw err
+        res.send(500).json("failed to create hotel")
     }
 })
 

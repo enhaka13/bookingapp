@@ -29,10 +29,10 @@ mongoose.connection.on("connected", () => {
 //Middleware
 app.use(express.json())
 
-app.use("api/v1/auth", authRoute)
-app.use("api/v1/hotels", hotelsRoute)
-app.use("api/v1/rooms", roomsRoute)
-app.use("api/v1/users", usersRoute)
+app.use("/api/v1/auth", authRoute)
+app.use("/api/v1/hotels", hotelsRoute)
+app.use("/api/v1/rooms", roomsRoute)
+app.use("/api/v1/users", usersRoute)
 
 app.listen(4000, () => {
     connect()
